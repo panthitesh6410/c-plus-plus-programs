@@ -1,0 +1,1 @@
+// program to accept string containing consecutive 1's :
