@@ -22,6 +22,5 @@ int main()
     **q = 6 ;            // dereferencing value of x
     cout<<x ;           //new value of x
 
-
     return 0;
 }
