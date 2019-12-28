@@ -1,31 +1,26 @@
 // program to find the longest possible palindrome sub-string in a given string.
+// abcdaabbaaxetr --> aabbaa
 
 #include<iostream>
 using namespace std;
 
-bool is_palindrome(string str)
+string is_palindrome(string str, int x, int y)
 {
-    int mid = str.length()/2;
     string ori = str;
-    for(int i=0;i<mid;i++)
+    int len = str.length();
+    for(int i=x;i<y;i++)
     {
         int temp = str[i];
-        str[i] = str[mid-1-i];
-        str[mid-1-i] = temp;
+        str[i] = str[len-1-i];
+        str[len-1-i] = temp;
     }
-    if(ori == str)
-        return true;
-    else
-        return false;
+    return str;
 }
 
 int main()
 {
     string str;
     cin>>str;
-    cout<<is_palindrome(str);
-
+    cout<<is_palindrome(str, 0, 5);
     return 0;
 }
-
-
