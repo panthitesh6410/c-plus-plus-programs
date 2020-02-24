@@ -13,12 +13,30 @@
 // Input - t(testcases) , next t lines have n(cycles)
 // Output - Height after n cycles for each n.
 
-
-
-
-
-
-
-// ****************************************************************
-
-// next problem - Minimum Distances
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=1;i<=t;i++)
+    {
+        int n;
+        cin>>n;
+        int height=1, j=1;
+        while(j<=n)
+        {
+            if(j%2 != 0)
+            {
+                height=height*2;
+                j++;
+            }
+            else{
+                height++;
+                j++;
+            }
+        }
+        cout<<height<<endl;
+    }
+    return 0;
+}
