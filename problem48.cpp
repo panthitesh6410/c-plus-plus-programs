@@ -17,7 +17,7 @@ void sort_task(vector<int> v1)
         int sq2 = v1[j]*v1[j];
         if(sq1>=sq2)
             output[j] = sq1;
-        elseet
+        else
             output[j] = sq2;
     }
     for(int i=0;i<output.size();i++)
