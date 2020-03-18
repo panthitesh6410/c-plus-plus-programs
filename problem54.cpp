@@ -1,6 +1,6 @@
 //  ELTP ASSIGNMENT PROBLEMS - 
 
-
+// 1.
 // pattern : 7,10,7,11,9,12,...
 
 // #include<iostream>
@@ -557,3 +557,371 @@
 //     }
 //     return 0;
 // }
+
+
+// 2. compound interest -
+
+// #include<iostream>
+// #include<math.h>
+// using namespace std;
+// int main()
+// {
+//     float p, r, n, t, CI;
+//     cin>>p>>r>>n>>t;
+//     r = r/100;
+//     CI = p * pow((1+(r/n)), n*t);
+//     cout<<CI; 
+//     return 0;
+// }
+
+
+// 3. read 2 no's and divide larger by smaller - 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int num1, num2, result;
+//     cin>>num1>>num2;
+//     if(num1>=num2)
+//     {
+//         cout<<num1<<" is grater than"<<num2;
+//     }
+//     else if(num2>=num1){
+//         cout<<num2<<" is grater than "<<num1;
+//     }
+//     return 0;
+// }
+
+
+// 4. calculate 2nd largest of given 3 no's - 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int num1, num2, num3;
+//     cin>>num1>>num2>>num3;
+//     if((num1>=num2 && num1<=num3) || (num1<=num2 && num1>=num3))
+//         cout<<num1<<" is 2nd largest";
+//     else if((num2>=num1 && num2<=num3) || (num2<=num1 && num2>=num3))
+//         cout<<num2<<" is 2nd largest";
+//     else
+//             cout<<num3<<" is 2nd largest";
+//     return 0;
+// }
+
+
+// 5. print count of +ve and -ve no's, program will end zero is encountered.
+
+// #include<iostream>
+// using namespace std;
+// int main()
+
+// {
+//     int num, countp=0, countn=0;
+//     while(1)
+//     {
+//         cin>>num;
+//         if(num>0)
+//             countp++;
+//         else if(num<0)
+//             countn++;
+//         else
+//             break;
+//     }    
+//     cout<<"positive count : "<<countp<<endl;
+//     cout<<"negitive count : "<<countn<<endl;
+//     return 0;
+// }
+
+
+// 6. Tell if sum of digits of a no. is odd or even
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int num;
+//     cin>>num;
+//     int sum = 0;
+//     while(num != 0)
+//     {
+//         int d = num % 10;
+//         sum += d;
+//         num /= 10;
+//     }
+//     if(sum % 2 == 0)
+//         cout<<"sum is even";
+//     else
+//         cout<<" sum is odd";
+//     return 0;
+// }
+
+
+// 7. Reverse a given no. - 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int num, rev=0;
+//     cin>>num;
+//     while(num != 0)
+//     {
+//         int d = num % 10;
+//         rev = (rev*10) + d;
+//         num /= 10;
+//     }
+//     cout<<"Reverse is "<<rev;
+//     return 0;
+// }
+
+
+// 8. calculate power using loop - 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int x, y, res=1;
+//     cin>>x>>y;
+//     for(int i=1;i<=y;i++)
+//         res = res * x;
+//     cout<<"Result = "<<res;
+//     return 0;
+// }
+
+
+// 9. multiplication table for numbers from 1 to n - 
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     for(int i=1;i<=n;i++)
+//     {
+//         for(int j=1;j<=10;j++)
+//         {
+//             cout<<i<<" * "<<j<<" = "<<i*j<<endl;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+// 10. calculate series : 1 + 2*1 + 3*2 + 4*3 + N*N-1 -
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     if(n>0)
+//     {
+//         int num = 1, sum = 0;
+//         for(int i=1;i<=n;i++)
+//         {
+//             sum += (num*num-1);
+//             num++;
+//         }
+//         cout<<sum;
+//     }
+//     return 0;
+// }
+
+// 11. print all prime factors of a number -
+
+// #include<iostream>
+// using namespace std;
+// bool is_prime(int num)
+// {
+//     bool flag = true;
+//     for(int i=2;i<=num/2;i++)
+//     {
+//         if(num % i == 0)
+//             flag = false;
+//     }
+//     return flag;
+// }
+// int main()
+// {
+//     int num;
+//     cin>>num;
+//     for(int i=2;i<=num/2;i++)
+//     {
+//         if(num % i == 0 && is_prime(i))
+//         {
+//             cout<<i<<" ";
+//         }
+//     }
+//     return 0;
+// }
+
+// 12. tell the no. is perfect no. or not     (sum of factors = num) -
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int num;
+//     cin>>num;
+//     int sum=0;
+//     for(int i=1;i<=num/2;i++)
+//     {
+//         if(num % i == 0)
+//             sum += i;
+//     }
+//     if(num == sum)
+//         cout<<num<<" is a perfect number";
+//     else
+//         cout<<num<<" is not a perfect number";
+//     return 0;
+// }
+
+// 13. generate all perfect numbers between  1 and N -
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     for(int j=1;j<=n;j++)
+//     {
+//         int sum=0;
+//         for(int i=1;i<=j/2;i++)
+//         {
+//             if(j % i == 0)
+//                 sum += i;
+//         }
+//         if(sum == j)
+//             cout<<j<<" ";
+//     }
+//     return 0;
+// }
+
+// 14. sum of series : 1 - 2/2! + 3/3! - 4/4! + N/N! ...
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+
+//     return 0;
+// }
+
+// 15. evaluate upto 15th term : 1 - 1/3 + 1/5 - 1/7 ...
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     float num = 1, res=0, i=1;
+//     while(i<=15)
+//     {
+//         res = res + 1/num;
+//         num += 2;
+//         i++;
+//         if(i<=15)
+//         {
+//             res = res - 1/num;
+//         }
+//     }
+//     cout<<res;
+//     return 0;
+// }
+
+// 16. print sum of : 1 + (1+2) + (1+2+3) + (1+2+3+4) + ... N
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int sum=0, num=1;
+//     for(int i=1;i<=n;i++)
+//     {
+//         for(int j=1;j<=i;j++)
+//         {
+//             sum = sum + j;
+//         }
+//     }
+//     cout<<sum;
+//     return 0;
+// }
+
+// 17. sum of x + x^2 + x^3 + ... + x^n :
+
+// #include<iostream>
+// #include<math.h>
+// using namespace std;
+// int main()
+// {
+//     int n,x;
+//     cin>>n>>x;
+//     int sum = 0;
+//     for(int i=1;i<=n;i++)
+//         sum += pow(x,i);
+//     cout<<sum;
+//     return 0;
+// }
+
+// 18. input 3 sides of a triangle and tell if they form a valid triangle :
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int a,b,c;
+//     cin>>a>>b>>c;
+//     if(a+b>=c || b+c>=a || a+c>=b)
+//         cout<<"traingle is valid";
+//     else
+//         cout<<"triangle is not valid";
+//     return 0;
+// }
+
+// 19. print perfect squares between 100 and 1000 -
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int num;
+//     for(num=100;num<=1000;num++)
+//     {
+//         for(int i=1;i<=num/2;i++)
+//         {
+//             if(num == i*i)
+//                 cout<<num<<" ";
+//         }
+//     }
+//     return 0;
+// }
+
+// 20. to find ith no. of fibonacci series : (0, 1, 1, 2, 3, 5, 8, 13, ...)
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int a=0,b=1,c;
+//     for(int i=1;i<=n-2;i++)
+//     {
+//         c = a+b;
+//         a = b;
+//         b = c;
+//     }
+//     cout<<c;
+//     return 0;
+// }
+
