@@ -15,7 +15,7 @@ int main()
     cout<<**q<<endl;    // value of x
     cout<<*q<<endl;     // value of p i.e. address of x
     cout<<q<<endl;      // address of p
-    cout<<&q<<endl;     // address of r
+    cout<<&q<<endl;     // address of q
 
     // cout<<&q+1<<endl;   // next address  
 
