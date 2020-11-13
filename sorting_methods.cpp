@@ -1,7 +1,6 @@
-// Various Sorting Techniques :
+// Sorting Techniques :
 
-// Bubble Sort -
-// void bubble_sort(int arr[], int n)
+// void bubble_sort(int *arr, int n)
 // {
 //     for(int i=0;i<n-1;i++)
 //     {
@@ -12,47 +11,43 @@
 //                 int temp = arr[j];
 //                 arr[j] = arr[j+1];
 //                 arr[j+1] = temp;
-//             }
+//             }         
 //         }
 //     }
 // }
 
-// Selection Sort -
-// void selection_sort(int arr[], int n)
+// void selection_sort(int *a, int n)
 // {
+//     int minimum;
 //     for(int i=0;i<n-1;i++)
 //     {
-//         int min = i;
+//         minimum=i;
 //         for(int j=i+1;j<n;j++)
 //         {
-//             if(arr[j] < arr[min])
-//                 min = j;
-//             int temp = arr[i];
-//             arr[i] = arr[min];
-//             arr[min] = temp;
+//             if(a[j]<a[minimum])
+//                 minimum=j;
 //         }
+//         int temp=a[i];
+//         a[i]=a[minimum];
+//         a[minimum]=temp;
 //     }
 // }
 
-// Insertion Sort - 
-// void insertion_sort(int arr[], int n)
-// {
-//     for(int i=1;i<n;i++)
-//     {
-//         int key = arr[i];  // select 1st unsorted element
-//         int j = i-1;
-//         while(j >= 0 && arr[j] > key)
-//         {
-//     // this loop shift elements to right
-//             arr[j+1] = arr[j];
-//             j--;
-//         }
-//         arr[j+1] = key; // insert unsortted element to its corret position
-//     }
-// }
-
-// Merge Sort -
-
+void insertion_sort(int *arr, int n)
+{
+    int key;
+    for(int i=1;i<n;i++)
+    {
+        key = arr[i];
+        int j = i-1;
+        while(j>=0 && arr[j]>key)
+        {
+            arr[j+1] = arr[j];
+            j = j-1;
+        }
+        arr[j+1] = key;
+    }
+}
 
 #include<iostream>
 using namespace std;
@@ -63,8 +58,11 @@ int main()
     int arr[n];
     for(int i=0;i<n;i++)
         cin>>arr[i];
+    cout<<"unsorted array - "<<endl;
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
     insertion_sort(arr, n);
-    cout<<"sorted array - "<<endl;
+    cout<<"\nsorted array - "<<endl;
     for(int i=0;i<n;i++)
         cout<<arr[i]<<" ";
     return 0;

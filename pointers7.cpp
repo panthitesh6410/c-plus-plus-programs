@@ -2,6 +2,24 @@
 
 #include<iostream>
 using namespace std;
+
+int FuncA(int A[][3])   // for 2-d array
+{
+    cout<<"print 2D array : "<<endl;
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+            cout<<A[i][j]<<" ";
+        cout<<endl;
+    }
+    return 0;
+}
+
+int FuncB(int (*B)[2][2])   // for 3-d array
+{
+    return 0;
+}
+
 int main()
 {
     int C[3][2][2] = {
@@ -34,12 +52,3 @@ int main()
     return 0;
 }
 
-int FuncA(int A[][3])   // for 2-d array
-{
-
-}
-
-int FuncB(int (*B)[2][2])   // for 3-d array
-{
-
-}

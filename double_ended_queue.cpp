@@ -21,11 +21,10 @@ void insertion_begining(int dqueue[], int num)
     }
 }
     
-
 void insertion_end(int dqueue[], int num)
 {   
     if(front == 4)
-        cout<<"Queu is Full"<<endl;
+        cout<<"Queue is Full"<<endl;
     else{
         if(front == -1)
         {    front++;
