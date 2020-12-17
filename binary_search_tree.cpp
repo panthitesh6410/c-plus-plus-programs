@@ -54,7 +54,7 @@ int find_max(node *root)
 {
     if(root == NULL)
         return -1;
-    // vist left as possible:
+    // vist right as possible:
     node *temp = root;
     while(temp->rchild != NULL)
         temp = temp->rchild;
